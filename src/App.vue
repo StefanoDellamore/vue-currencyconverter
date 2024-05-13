@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import CurrencyConverter from './components/CurrencyConverter.vue';
 
 export default {
     data() {
@@ -12,7 +13,8 @@ export default {
     components: {
         AppHeader,
         AppMain,
-        AppFooter
+        AppFooter,
+        CurrencyConverter
     },  
     methods: {
 
@@ -30,6 +32,8 @@ export default {
     <AppMain />
 
     <AppFooter />
+
+    <CurrencyConverter />
 </template>
 
 <style lang="scss">
