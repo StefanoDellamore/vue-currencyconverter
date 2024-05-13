@@ -23,17 +23,20 @@ export default {
 </script>
 
 <template>
-    <h1>
-        Mia App
-    </h1>
+    <div id="app">
+        <h1>
+            Mia App
+        </h1>
 
-    <AppHeader />
+        <AppHeader />
 
-    <AppMain />
+        <AppMain />
 
-    <AppFooter />
+        <AppFooter />
 
-    <CurrencyConverter />
+        <CurrencyConverter />
+    </div>
+    
 </template>
 
 <style lang="scss">
