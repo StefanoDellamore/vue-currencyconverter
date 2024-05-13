@@ -51,12 +51,16 @@ export default {
 
 
         <label for="convertedAmount" class="label"></label>
-            <input type="number" id="convertedAmount">
+            <input
+                type="number"
+                id="convertedAmount"
+                class="currency-input">
 
-        <label class="label"></label>
-        <select name="currency" id="currency">
-            <option value="currency">eur</option>
-            <option value="currency">usd</option>
+        <label class="currency-label"></label>
+        <select v-model="selectedCurrency2" class="currency-input">
+            <option v-for="currency in currencyOptions" :key="currency" :value="currency">
+                {{ currency }}
+            </option>
         </select>
         
     </div>
