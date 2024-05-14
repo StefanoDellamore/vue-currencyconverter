@@ -50,6 +50,14 @@ export default {
                 this.amount = null;
             }
         },
+        async handleCurrencyChange(currencyType) {
+            // Metodo per gestire il cambio di valuta selezionata
+            if (currencyType == 'selectedCurrency1') {
+                this.convertCurrencies();
+            } else {
+                this.convertCurrencies();
+            }
+        }
         
     }
 }
@@ -58,7 +66,9 @@ export default {
 <template>
 
     <div>
+        <!-- Label 1 -->
         <label for="amountInput" class="currency-label"></label>
+            <!-- Input quantità  -->
             <input
                 type="number"
                 v-model.number="amount"
@@ -68,16 +78,16 @@ export default {
                
 
         <label class="label"></label>
-        <select v-model="selectedCurrency1" class="currency-input">
+            <!-- Select valute  -->
+            <select v-model="selectedCurrency1" class="currency-input" @change="handleCurrencyChange ('selectedCurrency1')">
+                <option v-for="currency in currencyOptions" :key="currency" :value="currency">
+                    <span>{{ currency }}</span>
+                </option>  
+            </select>
 
-            <option v-for="currency in currencyOptions" :key="currency" :value="currency">
-                <span>{{ currency }}</span>
-            </option>
-            
-        </select>
-
-
+        <!-- Label 2 -->
         <label for="convertedAmountInput" class="label"></label>
+            <!-- Input quantità  -->
             <input
                 type="number"
                 id="convertedAmountInput"
@@ -87,7 +97,8 @@ export default {
                 
 
         <label class="currency-label"></label>
-        <select v-model="selectedCurrency2" class="currency-input">
+        <!-- Select valute  -->
+        <select v-model="selectedCurrency2" class="currency-input" @change="handleCurrencyChange('selectedCurrency2')">
             <option v-for="currency in currencyOptions" :key="currency" :value="currency">
                 {{ currency }}
             </option>
