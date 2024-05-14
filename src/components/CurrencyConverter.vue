@@ -65,6 +65,26 @@ export default {
 
 <template>
 
+    <h1>
+        CURRENCY CONVERTER
+    </h1>
+    <!-- Display Values -->
+    <div class="values-display">
+        <div>
+            <span class="color-text">
+                {{ amount }} ({{ selectedCurrency1 }})
+            </span>
+            <span class="font-size">
+                uguale a:
+            </span>
+        </div>
+
+        <div class="text">
+            <p>{{ convertedAmount }} ({{ selectedCurrency2 }})</p>
+        </div>
+    </div>
+
+
     <div>
         <!-- Label 1 -->
         <label for="amountInput" class="currency-label"></label>
@@ -109,4 +129,37 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.margin {
+    margin-right: 10px;
+    margin-top: 10px-;
+}
+
+.values-display {
+    font-weight: bold;
+}
+
+input, select {
+    border: 1px solid #436451;
+    margin-top: 10px;
+}
+
+.color-text, .text {
+    font-weight: bold;
+    color: red;
+}
+
+.text {
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+
+.font-size {
+    font-size: 0.8rem;
+}
 </style>
