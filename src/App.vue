@@ -24,22 +24,32 @@ export default {
 
 <template>
     <div id="app">
-        <h1>
-            Mia App
-        </h1>
-
-        <AppHeader />
-
-        <AppMain />
-
-        <AppFooter />
-
-        <CurrencyConverter />
-    </div>
-    
+        <div class="container">
+            <CurrencyConverter />
+        </div>
+    </div>   
 </template>
 
 <style lang="scss">
 @use "assets/scss/main" as *;
 @import "assets/scss/partials/reset";
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    height: 100vh;
+    background-image: url(/public/img/Pattern.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.container {
+    border: 5px solid #8CBA92;
+    background-color: white;
+    padding: 50px;
+}
 </style>
